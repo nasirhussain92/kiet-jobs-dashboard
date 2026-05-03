@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>KIET Jobs Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --ink: #1a1a2e;
+    --ink-muted: #5a5a72;
+    --ink-faint: #9898aa;
+    --surface: #f8f7f4;
+    --surface-2: #ffffff;
+    --border: #e4e2dc;
+    --accent: #2d5a8e;
+    --accent-light: #e8f0f9;
+    --accent-2: #5b3a8c;
+    --green: #2a7a4b;
+    --green-light: #e8f5ee;
+    --amber: #8a5a00;
+    --amber-light: #fef3e2;
+    --red: #8a2a2a;
+    --red-light: #fef0f0;
+    --radius: 10px;
+    --shadow: 0 1px 3px rgba(26,26,46,0.08), 0 1px 2px rgba(26,26,46,0.04);
+    --shadow-md: 0 4px 16px rgba(26,26,46,0.10);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--surface);
+    color: var(--ink);
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+
+  /* ─── LOGIN SCREEN ─── */
+  #login-screen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--ink);
+    position: fixed; inset: 0; z-index: 1000;
+  }
+  .login-box {
+    background: var(--surface-2);
+    border-radius: 16px;
+    padding: 48px 40px;
+    width: 380px;
+    box-shadow: var(--shadow-md);
+    text-align: center;
+  }
+  .login-logo {
+    font-family: 'Instrument Serif', serif;
+    font-size: 28px;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .login-sub {
+    font-size: 13px;
+    color: var(--ink-muted);
+    margin-bottom: 36px;
+    letter-spacing: 0.02em;
+  }
+  .login-label {
+    display: block;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 8px;
+  }
+  .login-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 15px;
+    font-family: inherit;
+    background: var(--surface);
+    color: var(--ink);
+    margin-bottom: 16px;
+    transition: border-color 0.2s;
+    outline: none;
+  }
+  .login-input:focus { border-color: var(--accent); }
+  .login-btn {
+    width: 100%;
+    padding: 13px;
+    background: var(--ink);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 15px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    margin-top: 4px;
+  }
+  .login-btn:hover { background: #2a2a45; }
+  .login-btn:active { transform: scale(0.98); }
+  .login-error {
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--red);
+    min-height: 20px;
+  }
+
+  /* ─── DASHBOARD ─── */
+  #dashboard { display: none; }
+
+  header {
+    background: var(--surface-2);
+    border-bottom: 1px solid var(--border);
+    padding: 0 32px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+  }
+  .header-brand {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .header-title {
+    font-family: 'Instrument Serif', serif;
+    font-size: 22px;
+    color: var(--ink);
+  }
+  .header-badge {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 3px 8px;
+    border-radius: 100px;
+  }
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .last-updated {
+    font-size: 12px;
+    color: var(--ink-faint);
+  }
+  .logout-btn {
+    font-size: 13px;
+    color: var(--ink-muted);
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 14px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s;
+  }
+  .logout-btn:hover { background: var(--surface); color: var(--ink); }
+
+  main { max-width: 1280px; margin: 0 auto; padding: 32px; }
+
+  /* ─── STAT CARDS ─── */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .stat-card {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 22px;
+    box-shadow: var(--shadow);
+  }
+  .stat-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 8px;
+  }
+  .stat-value {
+    font-family: 'Instrument Serif', serif;
+    font-size: 36px;
+    line-height: 1;
+    color: var(--ink);
+  }
+  .stat-sub {
+    font-size: 12px;
+    color: var(--ink-muted);
+    margin-top: 4px;
+  }
+
+  /* ─── CONTROLS ─── */
+  .controls {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: flex-end;
+  }
+  .control-group { display: flex; flex-direction: column; gap: 6px; }
+  .control-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  select, input[type="date"], input[type="text"] {
+    padding: 9px 12px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--ink);
+    background: var(--surface);
+    outline: none;
+    transition: border-color 0.2s;
+    min-width: 180px;
+  }
+  select:focus, input:focus { border-color: var(--accent); }
+  .search-input { min-width: 240px; }
+  .clear-btn {
+    padding: 9px 18px;
+    background: none;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--ink-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .clear-btn:hover { border-color: var(--ink-muted); color: var(--ink); }
+  .result-count {
+    font-size: 13px;
+    color: var(--ink-faint);
+    margin-left: auto;
+    align-self: center;
+  }
+
+  /* ─── POSITION TABS ─── */
+  .tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .tab {
+    padding: 8px 18px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1.5px solid var(--border);
+    background: var(--surface-2);
+    color: var(--ink-muted);
+    transition: all 0.2s;
+  }
+  .tab:hover { border-color: var(--accent); color: var(--accent); }
+  .tab.active {
+    background: var(--ink);
+    color: white;
+    border-color: var(--ink);
+  }
+  .tab .tab-count {
+    display: inline-block;
+    font-size: 11px;
+    margin-left: 6px;
+    opacity: 0.7;
+  }
+
+  /* ─── TABLE ─── */
+  .table-wrap {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  table { width: 100%; border-collapse: collapse; }
+  thead tr {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+  }
+  th {
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+  }
+  th:hover { color: var(--ink); }
+  th .sort-arrow { opacity: 0.3; margin-left: 4px; }
+  th.sorted .sort-arrow { opacity: 1; }
+  td {
+    padding: 14px 16px;
+    font-size: 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr.data-row { cursor: pointer; transition: background 0.15s; }
+  tr.data-row:hover { background: var(--accent-light); }
+
+  .name-cell { font-weight: 500; }
+  .email-cell { color: var(--ink-muted); font-size: 13px; }
+  .date-cell { color: var(--ink-muted); font-size: 13px; white-space: nowrap; }
+
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+  }
+  .badge-high { background: var(--green-light); color: var(--green); }
+  .badge-medium { background: var(--amber-light); color: var(--amber); }
+  .badge-low { background: var(--red-light); color: var(--red); }
+  .badge-position {
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 12px;
+    padding: 3px 10px;
+    max-width: 220px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+  }
+  .has-resume { color: var(--green); font-size: 12px; font-weight: 500; }
+  .no-resume { color: var(--ink-faint); font-size: 12px; }
+
+  .empty-state {
+    text-align: center;
+    padding: 64px 32px;
+    color: var(--ink-faint);
+  }
+  .empty-state p { font-size: 15px; margin-top: 8px; }
+
+  /* ─── DETAIL MODAL ─── */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(26,26,46,0.5);
+    backdrop-filter: blur(3px);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: var(--surface-2);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 640px;
+    max-height: 88vh;
+    overflow-y: auto;
+    box-shadow: var(--shadow-md);
+  }
+  .modal-header {
+    padding: 24px 28px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    position: sticky;
+    top: 0;
+    background: var(--surface-2);
+  }
+  .modal-name {
+    font-family: 'Instrument Serif', serif;
+    font-size: 26px;
+    line-height: 1.2;
+  }
+  .modal-position { font-size: 13px; color: var(--ink-muted); margin-top: 4px; }
+  .close-btn {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--ink-muted);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.2s;
+  }
+  .close-btn:hover { background: var(--surface); color: var(--ink); }
+  .modal-body { padding: 24px 28px; }
+  .detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+  .detail-item {}
+  .detail-key {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 4px;
+  }
+  .detail-val { font-size: 14px; color: var(--ink); }
+  .detail-section-title {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .summary-box {
+    background: var(--surface);
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 14px;
+    color: var(--ink-muted);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+  .attachment-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    font-size: 12px;
+    color: var(--ink-muted);
+    margin: 4px 4px 0 0;
+  }
+  .att-icon { font-size: 14px; }
+</style>
+</head>
+<body>
+
+<!-- ─── LOGIN SCREEN ─── -->
+<div id="login-screen">
+  <div class="login-box">
+    <div class="login-logo">KIET University</div>
+    <div class="login-sub">Jobs Dashboard — Authorised Access Only</div>
+    <label class="login-label">Password</label>
+    <input class="login-input" type="password" id="pwd-input"
+      placeholder="Enter dashboard password"
+      onkeydown="if(event.key==='Enter') doLogin()"/>
+    <button class="login-btn" onclick="doLogin()">Access Dashboard</button>
+    <div class="login-error" id="login-error"></div>
+  </div>
+</div>
+
+<!-- ─── DASHBOARD ─── -->
+<div id="dashboard">
+  <header>
+    <div class="header-brand">
+      <span class="header-title">Jobs Dashboard</span>
+      <span class="header-badge">KIET</span>
+    </div>
+    <div class="header-right">
+      <span class="last-updated" id="last-updated"></span>
+      <button class="logout-btn" onclick="doLogout()">Log out</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Stats -->
+    <div class="stats-grid" id="stats-grid">
+      <div class="stat-card">
+        <div class="stat-label">Total Applicants</div>
+        <div class="stat-value" id="s-total">—</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">With Resume</div>
+        <div class="stat-value" id="s-resume">—</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">This Month</div>
+        <div class="stat-value" id="s-month">—</div>
+      </div>
+      <div class="stat-card" id="s-pos-card-1">
+        <div class="stat-label" id="s-pos-label-1">Position 1</div>
+        <div class="stat-value" id="s-pos-val-1">—</div>
+      </div>
+      <div class="stat-card" id="s-pos-card-2">
+        <div class="stat-label" id="s-pos-label-2">Position 2</div>
+        <div class="stat-value" id="s-pos-val-2">—</div>
+      </div>
+      <div class="stat-card" id="s-pos-card-3">
+        <div class="stat-label" id="s-pos-label-3">Position 3</div>
+        <div class="stat-value" id="s-pos-val-3">—</div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <div class="control-group">
+        <label class="control-label">Search</label>
+        <input type="text" class="search-input" id="search-input"
+          placeholder="Name, email, designation…" oninput="applyFilters()"/>
+      </div>
+      <div class="control-group">
+        <label class="control-label">From Date</label>
+        <input type="date" id="date-from" onchange="applyFilters()"/>
+      </div>
+      <div class="control-group">
+        <label class="control-label">To Date</label>
+        <input type="date" id="date-to" onchange="applyFilters()"/>
+      </div>
+      <div class="control-group">
+        <label class="control-label">Resume</label>
+        <select id="filter-resume" onchange="applyFilters()">
+          <option value="">All</option>
+          <option value="yes">Has Resume</option>
+          <option value="no">No Resume</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label class="control-label">Confidence</label>
+        <select id="filter-conf" onchange="applyFilters()">
+          <option value="">All</option>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+      </div>
+      <button class="clear-btn" onclick="clearFilters()">Clear</button>
+      <span class="result-count" id="result-count"></span>
+    </div>
+
+    <!-- Position Tabs -->
+    <div class="tabs" id="position-tabs"></div>
+
+    <!-- Table -->
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th onclick="sortBy('applicant_name')">Name <span class="sort-arrow" id="arr-applicant_name">↕</span></th>
+            <th onclick="sortBy('position_applied')">Position <span class="sort-arrow" id="arr-position_applied">↕</span></th>
+            <th onclick="sortBy('current_designation')">Designation <span class="sort-arrow" id="arr-current_designation">↕</span></th>
+            <th onclick="sortBy('experience_years')">Exp. <span class="sort-arrow" id="arr-experience_years">↕</span></th>
+            <th onclick="sortBy('received_date')">Received <span class="sort-arrow" id="arr-received_date">↕</span></th>
+            <th>Resume</th>
+            <th onclick="sortBy('confidence')">Parse Quality <span class="sort-arrow" id="arr-confidence">↕</span></th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+  </main>
+</div>
+
+<!-- ─── DETAIL MODAL ─── -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <div class="modal-name" id="m-name"></div>
+        <div class="modal-position" id="m-position"></div>
+      </div>
+      <button class="close-btn" onclick="closeModalDirect()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="summary-box" id="m-summary"></div>
+      <div class="detail-grid">
+        <div class="detail-item"><div class="detail-key">Email</div><div class="detail-val" id="m-email"></div></div>
+        <div class="detail-item"><div class="detail-key">Phone</div><div class="detail-val" id="m-phone"></div></div>
+        <div class="detail-item"><div class="detail-key">Education</div><div class="detail-val" id="m-edu"></div></div>
+        <div class="detail-item"><div class="detail-key">Experience</div><div class="detail-val" id="m-exp"></div></div>
+        <div class="detail-item"><div class="detail-key">Current Role</div><div class="detail-val" id="m-role"></div></div>
+        <div class="detail-item"><div class="detail-key">Received</div><div class="detail-val" id="m-date"></div></div>
+        <div class="detail-item"><div class="detail-key">Email Subject</div><div class="detail-val" id="m-subject"></div></div>
+        <div class="detail-item"><div class="detail-key">Parse Confidence</div><div class="detail-val" id="m-confidence"></div></div>
+      </div>
+      <div class="detail-section-title">Attachments</div>
+      <div id="m-attachments"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ─── CONFIG ────────────────────────────────────────────────
+// CHANGE THIS PASSWORD before deploying!
+const PASSWORD_HASH = hashStr("kiet@jobs2026");
+
+function hashStr(s) {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) {
+    h = Math.imul(31, h) + s.charCodeAt(i) | 0;
+  }
+  return String(h);
+}
+
+// GitHub raw JSON URL — update with your actual repo
+const DATA_URL = "data/applicants.json";
+// If using GitHub Pages, use the raw URL:
+// const DATA_URL = "https://raw.githubusercontent.com/YOUR_USERNAME/kiet-jobs-dashboard/main/data/applicants.json";
+
+// ─── AUTH ──────────────────────────────────────────────────
+function doLogin() {
+  const pwd = document.getElementById('pwd-input').value;
+  if (hashStr(pwd) === PASSWORD_HASH) {
+    sessionStorage.setItem('kiet_auth', '1');
+    document.getElementById('login-screen').style.display = 'none';
+    document.getElementById('dashboard').style.display = 'block';
+    loadData();
+  } else {
+    document.getElementById('login-error').textContent = 'Incorrect password. Please try again.';
+    document.getElementById('pwd-input').value = '';
+  }
+}
+
+function doLogout() {
+  sessionStorage.removeItem('kiet_auth');
+  location.reload();
+}
+
+// Auto-login if already authenticated this session
+if (sessionStorage.getItem('kiet_auth') === '1') {
+  document.getElementById('login-screen').style.display = 'none';
+  document.getElementById('dashboard').style.display = 'block';
+}
+
+// ─── STATE ─────────────────────────────────────────────────
+let allApplicants = [];
+let filteredApplicants = [];
+let positions = [];
+let activePosition = 'all';
+let sortField = 'received_date';
+let sortAsc = false;
+
+// ─── DATA LOADING ──────────────────────────────────────────
+async function loadData() {
+  try {
+    const res = await fetch(DATA_URL + '?t=' + Date.now());
+    const data = await res.json();
+    allApplicants = data.applicants || [];
+    positions = data.positions || [...new Set(allApplicants.map(a => a.position_applied).filter(p => p && p !== 'Unknown'))];
+
+    document.getElementById('last-updated').textContent = 'Updated: ' + (data.generated_at || '');
+    document.getElementById('date-from').value = data.fetch_from_date
+      ? data.fetch_from_date.replace(/\//g, '-') : '2026-04-11';
+
+    buildTabs();
+    updateStats();
+    applyFilters();
+  } catch (e) {
+    document.getElementById('table-body').innerHTML =
+      '<tr><td colspan="7" style="text-align:center;padding:40px;color:#888">Could not load data. Make sure the Colab notebook has been run and applicants.json is in your repo.</td></tr>';
+    console.error(e);
+  }
+}
+
+// ─── TABS ──────────────────────────────────────────────────
+function buildTabs() {
+  const container = document.getElementById('position-tabs');
+  const allCount = allApplicants.length;
+  let html = `<div class="tab active" onclick="setPosition('all', this)">All <span class="tab-count">${allCount}</span></div>`;
+  positions.forEach(p => {
+    const c = allApplicants.filter(a => a.position_applied === p).length;
+    html += `<div class="tab" onclick="setPosition('${p.replace(/'/g, "\\'")}', this)">${p} <span class="tab-count">${c}</span></div>`;
+  });
+  html += `<div class="tab" onclick="setPosition('Unknown', this)">Unknown <span class="tab-count">${allApplicants.filter(a => !a.position_applied || a.position_applied === 'Unknown').length}</span></div>`;
+  container.innerHTML = html;
+}
+
+function setPosition(pos, el) {
+  activePosition = pos;
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  applyFilters();
+}
+
+// ─── STATS ─────────────────────────────────────────────────
+function updateStats() {
+  document.getElementById('s-total').textContent = allApplicants.length;
+  document.getElementById('s-resume').textContent = allApplicants.filter(a => a.has_resume).length;
+  const now = new Date();
+  document.getElementById('s-month').textContent = allApplicants.filter(a => {
+    if (!a.received_date) return false;
+    const d = new Date(a.received_date);
+    return d.getMonth() === now.getMonth() && d.getFullYear() === now.getFullYear();
+  }).length;
+  positions.slice(0, 3).forEach((p, i) => {
+    const n = i + 1;
+    const short = p.replace('Dean Faculty of ', '').replace(' Sciences', '');
+    document.getElementById(`s-pos-label-${n}`).textContent = short;
+    document.getElementById(`s-pos-val-${n}`).textContent = allApplicants.filter(a => a.position_applied === p).length;
+  });
+}
+
+// ─── FILTERS ──────────────────────────────────────────────
+function applyFilters() {
+  const search = document.getElementById('search-input').value.toLowerCase();
+  const from   = document.getElementById('date-from').value;
+  const to     = document.getElementById('date-to').value;
+  const resume = document.getElementById('filter-resume').value;
+  const conf   = document.getElementById('filter-conf').value;
+
+  filteredApplicants = allApplicants.filter(a => {
+    if (activePosition !== 'all') {
+      if (activePosition === 'Unknown') {
+        if (a.position_applied && a.position_applied !== 'Unknown') return false;
+      } else {
+        if (a.position_applied !== activePosition) return false;
+      }
+    }
+    if (search) {
+      const hay = [a.applicant_name, a.email, a.sender_email, a.current_designation, a.summary].join(' ').toLowerCase();
+      if (!hay.includes(search)) return false;
+    }
+    if (from && a.received_date) { if (a.received_date.slice(0,10) < from) return false; }
+    if (to   && a.received_date) { if (a.received_date.slice(0,10) > to) return false; }
+    if (resume === 'yes' && !a.has_resume) return false;
+    if (resume === 'no'  &&  a.has_resume) return false;
+    if (conf && a.confidence !== conf) return false;
+    return true;
+  });
+
+  sortApplicants();
+  renderTable();
+  document.getElementById('result-count').textContent =
+    `${filteredApplicants.length} of ${allApplicants.length} applicants`;
+}
+
+function clearFilters() {
+  document.getElementById('search-input').value = '';
+  document.getElementById('date-from').value = '';
+  document.getElementById('date-to').value = '';
+  document.getElementById('filter-resume').value = '';
+  document.getElementById('filter-conf').value = '';
+  activePosition = 'all';
+  document.querySelectorAll('.tab').forEach((t, i) => t.classList.toggle('active', i === 0));
+  applyFilters();
+}
+
+// ─── SORT ──────────────────────────────────────────────────
+function sortBy(field) {
+  if (sortField === field) sortAsc = !sortAsc;
+  else { sortField = field; sortAsc = field !== 'received_date'; }
+  document.querySelectorAll('th').forEach(t => t.classList.remove('sorted'));
+  const arrow = document.getElementById('arr-' + field);
+  if (arrow) {
+    arrow.parentElement.classList.add('sorted');
+    arrow.textContent = sortAsc ? '↑' : '↓';
+  }
+  sortApplicants();
+  renderTable();
+}
+
+function sortApplicants() {
+  filteredApplicants.sort((a, b) => {
+    let va = a[sortField] ?? '';
+    let vb = b[sortField] ?? '';
+    if (sortField === 'experience_years') {
+      va = parseFloat(va) || 0;
+      vb = parseFloat(vb) || 0;
+      return sortAsc ? va - vb : vb - va;
+    }
+    va = String(va).toLowerCase();
+    vb = String(vb).toLowerCase();
+    return sortAsc ? va.localeCompare(vb) : vb.localeCompare(va);
+  });
+}
+
+// ─── TABLE RENDER ──────────────────────────────────────────
+function renderTable() {
+  const tbody = document.getElementById('table-body');
+  if (!filteredApplicants.length) {
+    tbody.innerHTML = `<tr><td colspan="7" style="text-align:center;padding:48px;color:var(--ink-faint)">
+      <div style="font-size:32px;margin-bottom:8px">📭</div>
+      <p>No applicants match your filters.</p></td></tr>`;
+    return;
+  }
+  tbody.innerHTML = filteredApplicants.map((a, i) => `
+    <tr class="data-row" onclick="openModal(${i})">
+      <td>
+        <div class="name-cell">${esc(a.applicant_name || 'Unknown')}</div>
+        <div class="email-cell">${esc(a.email !== 'Unknown' ? a.email : a.sender_email || '')}</div>
+      </td>
+      <td><span class="badge badge-position">${esc(a.position_applied || 'Unknown')}</span></td>
+      <td style="color:var(--ink-muted);font-size:13px">${esc(a.current_designation || '—')}</td>
+      <td style="font-size:13px">${a.experience_years != null ? a.experience_years + ' yrs' : '—'}</td>
+      <td class="date-cell">${formatDate(a.received_date)}</td>
+      <td>${a.has_resume
+        ? '<span class="has-resume">📎 Yes</span>'
+        : '<span class="no-resume">—</span>'}</td>
+      <td><span class="badge badge-${a.confidence || 'low'}">${a.confidence || 'low'}</span></td>
+    </tr>`).join('');
+}
+
+function formatDate(d) {
+  if (!d) return '—';
+  try {
+    return new Date(d).toLocaleDateString('en-PK', { day:'numeric', month:'short', year:'numeric' });
+  } catch { return d; }
+}
+
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ─── MODAL ─────────────────────────────────────────────────
+function openModal(idx) {
+  const a = filteredApplicants[idx];
+  document.getElementById('m-name').textContent = a.applicant_name || 'Unknown Applicant';
+  document.getElementById('m-position').textContent = a.position_applied || 'Position unknown';
+  document.getElementById('m-summary').textContent = a.summary || 'No summary available.';
+  document.getElementById('m-email').textContent = a.email || a.sender_email || '—';
+  document.getElementById('m-phone').textContent = a.phone || '—';
+  document.getElementById('m-edu').textContent = a.education || '—';
+  document.getElementById('m-exp').textContent = a.experience_years != null ? a.experience_years + ' years' : '—';
+  document.getElementById('m-role').textContent = a.current_designation || '—';
+  document.getElementById('m-date').textContent = formatDate(a.received_date);
+  document.getElementById('m-subject').textContent = a.email_subject || '—';
+  document.getElementById('m-confidence').innerHTML = `<span class="badge badge-${a.confidence || 'low'}">${a.confidence || 'low'}</span>`;
+
+  const atts = (a.attachments || []);
+  document.getElementById('m-attachments').innerHTML = atts.length
+    ? atts.map(f => {
+        const icon = f.toLowerCase().endsWith('.pdf') ? '📄' : f.toLowerCase().endsWith('.docx') ? '📝' : '📎';
+        return `<span class="attachment-pill"><span class="att-icon">${icon}</span>${esc(f)}</span>`;
+      }).join('')
+    : '<span style="color:var(--ink-faint);font-size:13px">No attachments</span>';
+
+  document.getElementById('modal-overlay').classList.add('open');
+}
+
+function closeModal(e) {
+  if (e.target === document.getElementById('modal-overlay')) closeModalDirect();
+}
+function closeModalDirect() {
+  document.getElementById('modal-overlay').classList.remove('open');
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDirect(); });
+
+// Boot
+if (sessionStorage.getItem('kiet_auth') === '1') loadData();
+</script>
+</body>
+</html>
