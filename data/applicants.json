@@ -1,7 +1,1157 @@
 {
-  "generated_at": "",
-  "total": 0,
-  "positions": [],
+  "generated_at": "2026-05-07 10:09 UTC",
+  "total": 60,
+  "positions": [
+    "Registrar KIET",
+    "Dean Faculty of Computing & Information Sciences",
+    "Dean Faculty of Management Sciences"
+  ],
   "fetch_from_date": "2026/04/11",
-  "applicants": []
+  "applicants": [
+    {
+      "id": "19dfbae2e68e3078",
+      "received_date": "2026-05-06 10:06",
+      "email_subject": "Application for the post of Registrar",
+      "sender_email": "Muhammad Yousaf Jamil <yousafjamil@gmail.com>",
+      "attachments": [
+        "Resume Updated_MYJ_1.3.pdf"
+      ],
+      "applicant_name": "Muhammad Yousaf Jamil",
+      "email": "yousafjamil@gmail.com",
+      "phone": "0092-0300-8412905",
+      "position_applied": "Registrar KIET",
+      "current_designation": "Unknown",
+      "experience_years": 30,
+      "education": "Unknown",
+      "summary": "A highly competent and qualified professional with over 30 years of experience in managing Quality Assurance, Human Resource, and General Management in renowned national and multinational organizations, demonstrating strong leadership and a history of producing outstanding results.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19df73164d67849e",
+      "received_date": "2026-05-05 02:11",
+      "email_subject": "New Job Application: Dean, Faculty of Management Sciences from Dr. Syed Babar Ali",
+      "sender_email": "KIET Job Portal <kietmis2025@gmail.com>",
+      "attachments": [
+        "CV_Dr. Syed Babar Ali_20260505.pdf"
+      ],
+      "applicant_name": "Dr. Syed Babar Ali",
+      "email": "cfafrmcia@gmail.com",
+      "phone": "03213742560",
+      "position_applied": "Dean Faculty of Management Sciences",
+      "current_designation": "Professor at Hamdard University",
+      "experience_years": 25,
+      "education": "PhD in Finance",
+      "summary": "Dr. Syed Babar Ali is an experienced academic leader and Professor with over 25 years in academia and corporate finance, holding a PhD in Finance and multiple global certifications. He possesses strong research capabilities and strategic insight, with a clear vision to enhance institutional growth and achieve international recognition.",
+      "has_resume": false,
+      "confidence": "high"
+    },
+    {
+      "id": "19df50476325333a",
+      "received_date": "2026-05-05 03:03",
+      "email_subject": "CV for visiting faculty Business Admin.",
+      "sender_email": "Kanwal Siddiqui <kanwalsiddiki@gmail.com>",
+      "attachments": [
+        "CV_Kanwal_Mumtaz-Visiting Faculty-Buisness Admin Subjects - Copy.pdf"
+      ],
+      "applicant_name": "Kanwal Mumtaz",
+      "email": "learningworldwide360@gmail.com",
+      "phone": "+92-306-2116502",
+      "position_applied": "Unknown",
+      "current_designation": "Senior HR & Admin Consultant",
+      "experience_years": 28,
+      "education": "MS – Industrial & Organizational Human Psychology",
+      "summary": "Passionate and accomplished professional with over 20 years of corporate experience and 8 years of teaching in Business Administration and Management Studies. She combines practical HR and organizational expertise with strong academic insight to foster critical thinking and inspire learners.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19df1f8e64b85efc",
+      "received_date": "2026-05-04 01:51",
+      "email_subject": "New Job Application: Registrar from Sajjad Hussain",
+      "sender_email": "KIET Job Portal <kietmis2025@gmail.com>",
+      "attachments": [
+        "CV_Sajjad Hussain_20260504.pdf"
+      ],
+      "applicant_name": "Sajjad Hussain",
+      "email": "sajjad1575hussain@outlook.com",
+      "phone": "03022643134",
+      "position_applied": "Registrar KIET",
+      "current_designation": "Program Manager & Faculty Member",
+      "experience_years": 33,
+      "education": "MS Electrical Engineering",
+      "summary": "A seasoned academic administrator and faculty leader with 18 years of institutional experience at KIET and over 25 years in senior corporate roles, skilled in academic administration, HEC compliance, and institutional development. Holds an MS in Electrical Engineering and a Project Management Certificate.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19df0e0d72fb8d93",
+      "received_date": "2026-05-04 02:45",
+      "email_subject": "CV-Administartion",
+      "sender_email": "\"sheenahmed193@yahoo.com\" <sheenahmed193@yahoo.com>",
+      "attachments": [
+        "CV AFN.pdf"
+      ],
+      "applicant_name": "AFSHEEN AHMED",
+      "email": "sheenahmed193@yahoo.com",
+      "phone": "+92 345-3046512",
+      "position_applied": "Registrar KIET",
+      "current_designation": "Sectional Officer",
+      "experience_years": 8,
+      "education": "Masters in Economics",
+      "summary": "Process oriented data analyst with 8 years of experience, skilled in interpreting and analyzing data to drive growth for an educational institute. Generates meaningful reports and analyzes data and processes.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19de81a53ba84eb0",
+      "received_date": "2026-05-02 14:52",
+      "email_subject": "Resume for the Post of Registrar",
+      "sender_email": "Robin Stephen <robinhoodk@gmail.com>",
+      "attachments": [
+        "Robin Stephen - Resume 2026.pdf"
+      ],
+      "applicant_name": "Robin Stephen",
+      "email": "robinhoodk@gmail.com",
+      "phone": "0345-3082881",
+      "position_applied": "Registrar KIET",
+      "current_designation": "Registrar",
+      "experience_years": 14,
+      "education": "MBA in Human Resource Management",
+      "summary": "A highly experienced Registrar with over 14 years in higher education administration and academic leadership, specializing in institutional compliance, statutory governance, and campus management. Currently serving as Registrar at MiTE, he leads academic policy implementation and oversees secretariat support for statutory bodies.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19de814dcf2235ba",
+      "received_date": "2026-05-02 03:46",
+      "email_subject": "New Job Application: Registrar from Robin Stephen",
+      "sender_email": "KIET Job Portal <kietmis2025@gmail.com>",
+      "attachments": [
+        "CV_Robin Stephen_20260502.pdf"
+      ],
+      "applicant_name": "Robin Stephen",
+      "email": "robinhoodk@gmail.com",
+      "phone": "03453082881",
+      "position_applied": "Registrar KIET",
+      "current_designation": "Registrar",
+      "experience_years": 24,
+      "education": "MBA HRM",
+      "summary": "Robin Stephen is an experienced Registrar with 24 years in academic administration, demonstrating strong leadership in institutional governance, HEC compliance, and the establishment of new universities. Holding an MBA in HRM, he brings a proven track record of operational excellence and strategic leadership.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19de7d7e7430533e",
+      "received_date": "2026-05-02 13:39",
+      "email_subject": "Application for Data Entry Operator Position",
+      "sender_email": "NOMAN KHAN <nomankhan22558@gmail.com>",
+      "attachments": [
+        "M. Noman --- CV.pdf"
+      ],
+      "applicant_name": "Muhammad Noman",
+      "email": "nomankhan22558@gmail.com",
+      "phone": "0346-2408033",
+      "position_applied": "Unknown",
+      "current_designation": "Data Entry Operator",
+      "experience_years": 9,
+      "education": "Intermediate",
+      "summary": "A hardworking and detail-oriented Data Entry Operator with fast typing speed and high accuracy, skilled in MS Office and efficient data management.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19de6b50d0570b2d",
+      "received_date": "2026-05-01 21:21",
+      "email_subject": "New Job Application: Dean, Faculty of Management Sciences from Prof. Dr. Ghulam Muhammad",
+      "sender_email": "KIET Job Portal <kietmis2025@gmail.com>",
+      "attachments": [
+        "CV_Prof. Dr. Ghulam Muhammad_20260501.pdf"
+      ],
+      "applicant_name": "Prof. Dr. Ghulam Muhammad",
+      "email": "gmkiet@gmail.com",
+      "phone": "0300-2458913",
+      "position_applied": "Dean Faculty of Management Sciences",
+      "current_designation": "Professor and Head of M.Phil and Ph.D Programs",
+      "experience_years": 21,
+      "education": "Ph.D and Post-Doc",
+      "summary": "Prof. Dr. Ghulam Muhammad is an accomplished academic leader with 21 years of experience, currently serving as Professor and Head of M.Phil and Ph.D Programs. He holds a Post-Doctorate and Ph.D, demonstrating a strong record in research and institutional development.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19de6a3090a5d493",
+      "received_date": "2026-05-02 03:02",
+      "email_subject": "Fw: Apply for economics lecturer",
+      "sender_email": "Farooq Shaikh <farooqshaikh38@yahoo.com>",
+      "attachments": [
+        "Farooq Shaikh C.V.pdf"
+      ],
+      "applicant_name": "FAROOQ SHAIKH",
+      "email": "farooqshaikhlecturar@gmail.com",
+      "phone": "0330-5071888",
+      "position_applied": "Unknown",
+      "current_designation": "Lecturer/ Teacher",
+      "experience_years": 15,
+      "education": "M.A (ECONOMICS)",
+      "summary": "A passionate Teacher with a commitment to providing students with the skills and knowledge they need to excel in the field. Experienced in creating engaging and interactive lesson plans to help students gain a deeper understanding of the subject.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19de4b5fdf15b792",
+      "received_date": "2026-05-01 23:03",
+      "email_subject": "Application for the position of Dean Management Sciences",
+      "sender_email": "zunnoorain khan <zunnoorainkhann@gmail.com>",
+      "attachments": [
+        "cv.pdf"
+      ],
+      "applicant_name": "Zunnoorain Khan",
+      "email": "zunnoorainkhann@gmail.com",
+      "phone": "+92 3329123246",
+      "position_applied": "Dean Faculty of Management Sciences",
+      "current_designation": "Associate Professor/ Head (Departmental QEC)",
+      "experience_years": 14,
+      "education": "Ph.D. (Management)",
+      "summary": "Experienced academic leader with a Ph.D. in Management, currently serving as an Associate Professor, with extensive experience in academic leadership, quality assurance, and strategic development in higher education, focusing on accreditation and industry-academia linkages.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19de4b260ae03421",
+      "received_date": "2026-05-01 11:59",
+      "email_subject": "New Job Application: Dean, Faculty of Management Sciences from Zunnoorain Khan",
+      "sender_email": "KIET Job Portal <kietmis2025@gmail.com>",
+      "attachments": [
+        "CV_Zunnoorain Khan_20260501.pdf"
+      ],
+      "applicant_name": "Zunnoorain Khan",
+      "email": "zunnoorainkhann@gmail.com",
+      "phone": "03329123246",
+      "position_applied": "Dean Faculty of Management Sciences",
+      "current_designation": "Associate Professor",
+      "experience_years": 17,
+      "education": "Ph.D. (Management)",
+      "summary": "Dr. Zunnoorain Khan is an academic with a Ph.D. in Management Sciences and 17 years of experience, specializing in business council accreditation and developing strong industry-academia linkages to enhance academic programs and student employability.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19de3d3b6b09d082",
+      "received_date": "2026-05-01 07:56",
+      "email_subject": "New Job Application: Registrar from Iftikhar Ahmed",
+      "sender_email": "KIET Job Portal <kietmis2025@gmail.com>",
+      "attachments": [
+        "CV_Iftikhar Ahmed_20260501.pdf"
+      ],
+      "applicant_name": "Iftikhar Ahmed",
+      "email": "ahmed.iftikhar0181@gmail.com",
+      "phone": "03212269711",
+      "position_applied": "Registrar KIET",
+      "current_designation": "Deputy Director QEC",
+      "experience_years": 22,
+      "education": "MSMS",
+      "summary": "I have been associated with higher education institutions (HEIs) since 2004, engaging in various domains, including academic systems, examination systems, institutional compliance, quality enhancement, teaching, and student services. I possess well-developed interpersonal and leadership skills, enabling me to effectively lead teams while maintaining a results-oriented approach.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19ddf7461dae15f1",
+      "received_date": "2026-04-30 22:33",
+      "email_subject": "Application for the Position of Registrar – Sameen Rizvi",
+      "sender_email": "Sameen Rizvi <sameen.rizvi4858@gmail.com>",
+      "attachments": [
+        "SameenRizvi.pdf"
+      ],
+      "applicant_name": "Sameen Rizvi",
+      "email": "sameen.rizvi4858@gmail.com",
+      "phone": "03133845592",
+      "position_applied": "Registrar KIET",
+      "current_designation": "Manager - Corporate Liaison",
+      "experience_years": 10,
+      "education": "Master's in Public Administration (MPA)",
+      "summary": "With a strong academic foundation, over a decade of progressive experience spanning academic administration, corporate HR management, and institutional leadership, Sameen Rizvi is confident in her ability to contribute meaningfully to KIET's mission of excellence and institutional growth.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dde7e26b0ab1bb",
+      "received_date": "2026-04-30 18:04",
+      "email_subject": "EE,EL and SCM Visiting faculty",
+      "sender_email": "Mirza Imran <mimranb12@gmail.com>",
+      "attachments": [
+        "Engr.Mirza Imran.pdf"
+      ],
+      "applicant_name": "Mirza Imran",
+      "email": "mimranb12@gmail.com",
+      "phone": "+92335-8225203",
+      "position_applied": "Unknown",
+      "current_designation": "Assistant Manager – Procurement & Projects",
+      "experience_years": 6,
+      "education": "MBA (Supply Chain Management)",
+      "summary": "A highly motivated and results-driven professional with diverse experience in engineering, business operations, project management, procurement, facility engineering, and academic teaching. Seeking a challenging position where I can utilize my technical expertise, managerial skills, and business acumen to contribute effectively toward organizational growth, operational efficiency, and successful project execution.",
+      "has_resume": true,
+      "confidence": "medium"
+    },
+    {
+      "id": "19dde062800e2381",
+      "received_date": "2026-04-30 15:59",
+      "email_subject": "Applying for the Position Dean FCIS",
+      "sender_email": "\"Dr. Muhammad Fahad\" <mfahad@kiet.edu.pk>",
+      "attachments": [
+        "FahadCVForKIET.pdf"
+      ],
+      "applicant_name": "Dr. Muhammad Fahad",
+      "email": "mfahad@kiet.edu.pk",
+      "phone": "03453184603",
+      "position_applied": "Dean Faculty of Computing & Information Sciences",
+      "current_designation": "HoD CS",
+      "experience_years": null,
+      "education": "Ph.D. (Computer Science)",
+      "summary": "I am writing to express my interest in the position of Dean at KIET. With a strong academic and administrative background, I am committed to fostering academic excellence, innovation, and industry alignment.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19ddd4cba70ab577",
+      "received_date": "2026-04-30 01:31",
+      "email_subject": "New Job Application: Registrar from Usama Iqbal",
+      "sender_email": "KIET Job Portal <kietmis2025@gmail.com>",
+      "attachments": [
+        "CV_Usama Iqbal_20260430.pdf"
+      ],
+      "applicant_name": "Usama Iqbal",
+      "email": "usamabiniqbal85@gmail.com",
+      "phone": "03232161663",
+      "position_applied": "Registrar KIET",
+      "current_designation": "Director QEC / Management Representative – KASBIT",
+      "experience_years": 19,
+      "education": "PhD Scholar (in progress), MS (Management Science)",
+      "summary": "A true professional with versatile experience in Academia, Corporate, Research, Training, and Quality Measures. Aims to leverage in-depth knowledge to turn challenges into opportunities and problems into solutions.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19ddd3fc6125ff3c",
+      "received_date": "2026-04-30 12:17",
+      "email_subject": "Application for the Post of Registrar KIET",
+      "sender_email": "Usama Iqbal <usamabiniqbal85@gmail.com>",
+      "attachments": [
+        "Usama Iqbal CV.pdf"
+      ],
+      "applicant_name": "Usama Iqbal",
+      "email": "usamabiniqbal85@gmail.com",
+      "phone": "Unknown",
+      "position_applied": "Registrar KIET",
+      "current_designation": "Director QEC / Management Representative",
+      "experience_years": 15,
+      "education": "MS (Management Science)",
+      "summary": "A true professional with 15 years of experience across academia, corporate, research, training, and quality measures, adept at turning challenges into opportunities and problems into solutions.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dd818b77c898d6",
+      "received_date": "2026-04-29 01:16",
+      "email_subject": "New Job Application: Registrar from Syed Muhammad Sani Hassan",
+      "sender_email": "KIET Job Portal <kietmis2025@gmail.com>",
+      "attachments": [
+        "CV_Syed Muhammad Sani Hassan_20260429.pdf"
+      ],
+      "applicant_name": "Syed Muhammad Sani Hassan",
+      "email": "smsanihassan89@gmail.com",
+      "phone": "923353703488",
+      "position_applied": "Registrar KIET",
+      "current_designation": "Research Analyst and Assistant Controller of Examination",
+      "experience_years": 14,
+      "education": "MBA",
+      "summary": "The applicant has fourteen years of experience on different administrative and academic positions in various universities.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dd7fe03245e3a8",
+      "received_date": "2026-04-29 11:48",
+      "email_subject": "RESUME",
+      "sender_email": "Shurooque Fatima <fatimashurooque11@gmail.com>",
+      "attachments": [
+        "Resume.pdf"
+      ],
+      "applicant_name": "Shurooque Fatima",
+      "email": "fatimashurooque11@gmail.com",
+      "phone": "0092 310 2198494",
+      "position_applied": "Registrar KIET",
+      "current_designation": "QEC OFFICER",
+      "experience_years": 4,
+      "education": "MBA, Human Resources Management",
+      "summary": "Detail-oriented professional with experience in academic administration, data management, and HR support. Proven ability to manage academic records, compile data for accreditation, and coordinate activities.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dd7ba47b7e4dbb",
+      "received_date": "2026-04-29 05:33",
+      "email_subject": "Application for the Position of Dean",
+      "sender_email": "DUR-E- JABEEN <durejabeen@hotmail.com>",
+      "attachments": [
+        "1 Updated Dr Dur-e-Jabeen CV (April 2026).pdf",
+        "Cover Letter For KIET.pdf"
+      ],
+      "applicant_name": "Dur-e-Jabeen",
+      "email": "durejabeen@hotmail.com",
+      "phone": "+92 306 2330988",
+      "position_applied": "Dean Faculty of Computing & Information Sciences",
+      "current_designation": "Associate Professor",
+      "experience_years": 18,
+      "education": "PhD in Electronics Engineering",
+      "summary": "Dr. Dur-e-Jabeen is an Associate Professor with a PhD in Electronics Engineering and extensive experience in academic leadership, research, and administration. Her expertise lies in signal processing, artificial intelligence, and data-driven applications, making her a strong candidate for a Dean position.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dd782629071c9a",
+      "received_date": "2026-04-29 09:32",
+      "email_subject": "Application for the position of DEAN Faculty of Computing and Information Sciences (FCIS)",
+      "sender_email": "\"Dr. Maaz Bin Ahmed\" <maaz@kiet.edu.pk>",
+      "attachments": [
+        "Application_Dr.Maaz-Dean-FCIS-KIET.pdf"
+      ],
+      "applicant_name": "Prof. Dr. Maaz Bin Ahmad",
+      "email": "maazbinahmad@yahoo.com",
+      "phone": "0333-5264960",
+      "position_applied": "Dean Faculty of Computing & Information Sciences",
+      "current_designation": "Director Advanced Studies & Research (DASR)",
+      "experience_years": null,
+      "education": "PhD",
+      "summary": "Dr. Maaz Bin Ahmad is an experienced academic leader and researcher, currently serving as Director of Advanced Studies and Research. He has a strong background in academic governance, research development, and postgraduate program excellence, actively contributing to institutional growth and compliance.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dd76552c44187d",
+      "received_date": "2026-04-29 08:59",
+      "email_subject": "Dean Management Sciences",
+      "sender_email": "A I <asma.inayat@gmail.com>",
+      "attachments": [
+        "Asma Inayat - Trainer MarCom CV-Updated.pdf"
+      ],
+      "applicant_name": "Asma Inayat",
+      "email": "asma.inayat@gmail.com",
+      "phone": "+92 321 347 9618",
+      "position_applied": "Dean Faculty of Management Sciences",
+      "current_designation": "Head of Marketing & Communications",
+      "experience_years": 20,
+      "education": "Masters in Business Administration",
+      "summary": "Asma Inayat is a seasoned professional with over two decades of experience spanning education, media, and mental health. She specializes in marketing, communications, and institutional development, with a focus on academic leadership and integrating industry practice with learning environments.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dd75ed96add887",
+      "received_date": "2026-04-29 03:53",
+      "email_subject": "Application for Dean – Computing & Information Sciences",
+      "sender_email": "Muhammad Irfan <mirfananis@yahoo.com>",
+      "attachments": [
+        "Dean_CV_Dr_Irfan_Anis.docx"
+      ],
+      "applicant_name": "Muhammad Irfan Anis",
+      "email": "mirfananis@yahoo.com",
+      "phone": "+92-332-2600001",
+      "position_applied": "Dean Faculty of Computing & Information Sciences",
+      "current_designation": "Professor & Head of Department",
+      "experience_years": 25,
+      "education": "PhD",
+      "summary": "An academic leader with a PhD and over 25 years of experience in computing and engineering education and research. Currently serving as Professor & Head of Department at Iqra University, specializing in academic leadership, program development, and accreditation.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dd746ead2dd7dc",
+      "received_date": "2026-04-29 08:27",
+      "email_subject": "Application for the post of Registrar",
+      "sender_email": "Muhammad Yousaf Jamil <yousafjamil@gmail.com>",
+      "attachments": [
+        "Resume Updated_MYJ_1.3.pdf"
+      ],
+      "applicant_name": "Muhammad Yousaf Jamil",
+      "email": "yousafjamil@gmail.com",
+      "phone": "0092-0300-8412905",
+      "position_applied": "Registrar KIET",
+      "current_designation": "Unknown",
+      "experience_years": 30,
+      "education": "Unknown",
+      "summary": "Highly experienced professional with over 30 years in Managing Quality Assurance, Human Resource, and General Management in national and multinational organizations, demonstrating strong leadership and a passion for producing outstanding results.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dd48b9334343e2",
+      "received_date": "2026-04-28 19:43",
+      "email_subject": "Fwd: Registrar post",
+      "sender_email": "Asif Gopang <asif.gopang@hyd.szabist.edu.pk>",
+      "attachments": [
+        "Asif Ali CV 2026.docx"
+      ],
+      "applicant_name": "Asif Ali Gopang",
+      "email": "asif.gopang@hyd.szabist.edu.pk",
+      "phone": "Unknown",
+      "position_applied": "Registrar KIET",
+      "current_designation": "Assistant Manager - HR",
+      "experience_years": 20,
+      "education": "Double Masters in Business Administration (M.B.A) Equivalent to M.Phil",
+      "summary": "An HR professional with over 20 years of experience in various HR functions, focused on recruiting the right talent, leading and managing staff to increase organizational profitability.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dd4457b7fb026a",
+      "received_date": "2026-04-28 07:26",
+      "email_subject": "New Job Application: Dean, Faculty of Management Sciences from Atif Aziz",
+      "sender_email": "KIET Job Portal <kietmis2025@gmail.com>",
+      "attachments": [
+        "CV_Atif Aziz_20260428.pdf"
+      ],
+      "applicant_name": "Atif Aziz",
+      "email": "atif.aziz@iqra.edu.pk",
+      "phone": "03002257804",
+      "position_applied": "Dean Faculty of Management Sciences",
+      "current_designation": "Associate Professor and HoD",
+      "experience_years": 26,
+      "education": "Post-Doctoral",
+      "summary": "Dr. Atif Aziz is an experienced academic leader with over 15 years of experience, holding leadership roles as Associate Professor and Head of Department. He holds a PhD in Management and has a strong background in academic leadership, strategic planning, and research, dedicated to enhancing graduate employability.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dd4276d9f558e0",
+      "received_date": "2026-04-28 12:54",
+      "email_subject": "Application for the Positions of Dean and Registrar",
+      "sender_email": "Fida Hussain <fida.hussain07@yahoo.com>",
+      "attachments": [
+        "Fida_Hussain_CV_KIET.pdf",
+        "WhatsApp Image 2026-04-28 at 16.58.47.jpeg"
+      ],
+      "applicant_name": "Fida Hussain",
+      "email": "fida.hussain07@yahoo.com",
+      "phone": "+92-342-2486660",
+      "position_applied": "Dean Faculty of Computing & Information Sciences",
+      "current_designation": "Professor, Department of Computer Science",
+      "experience_years": 15,
+      "education": "PhD in Electrical Engineering with specialisation in Artificial Intelligence",
+      "summary": "Prof. Dr. Fida Hussain is an accomplished academic leader and researcher with over 15 years of experience in higher education, holding a PhD in Electrical Engineering (AI specialization). Currently a Professor in Computer Science, he offers strong expertise in academic leadership, institutional governance, and quality assurance.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dd311b92871b14",
+      "received_date": "2026-04-28 12:50",
+      "email_subject": "Dean – Computing & Information Sciences",
+      "sender_email": "Khalid Bin Muhammad <khalidbinmuhammad884@gmail.com>",
+      "attachments": [
+        "CV Dr KBM Detailed APRIL 2026.docx"
+      ],
+      "applicant_name": "Dr. Engr. Khalid Bin Muhammad",
+      "email": "khalidmcs@yahoo.com",
+      "phone": "0322-2621544",
+      "position_applied": "Dean Faculty of Computing & Information Sciences",
+      "current_designation": "Head of Department of Computer Science & Software Engineering at Ziauddin University",
+      "experience_years": 28,
+      "education": "PhD in Computer Science",
+      "summary": "A visionary academic leader and seasoned professional with over 28 years of experience across Higher Education Management, IT Governance, and Industry. Currently serving as Head of Department at Ziauddin University, with a proven track record in institutional development, strategic leadership, and capacity building.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dd2bae247ad798",
+      "received_date": "2026-04-28 11:15",
+      "email_subject": "Application for Professor/ Dean of Management Sciences",
+      "sender_email": "Minhaj Ikram <minhajikram@gmail.com>",
+      "attachments": [
+        "Dr. Minhaj Ikram CV 2026.pdf"
+      ],
+      "applicant_name": "Minhaj Ikram",
+      "email": "minhajikram@gmail.com",
+      "phone": "+92-321-8572681",
+      "position_applied": "Dean Faculty of Management Sciences",
+      "current_designation": "Head of Centre",
+      "experience_years": 17,
+      "education": "Ph.D. in Business Administration",
+      "summary": "Dedicated educator and academic leader with over 17 years of experience in higher education management. Currently Head of Centre at the International College of Excellence, he holds a Ph.D. in Business Administration and has a strong record of academic leadership.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dd25c12b0699a2",
+      "received_date": "2026-04-28 09:32",
+      "email_subject": "Post Apply for \"Registrar\"",
+      "sender_email": "Khursheed Zafar <khursheed.zafar1@gmail.com>",
+      "attachments": [
+        "CV Khurshid A. Zafar.pdf.pdf",
+        "My cover letter.pdf"
+      ],
+      "applicant_name": "Khursheed Ahmad Zafar",
+      "email": "khursheed.zafar1@gmail.com",
+      "phone": "+92-306-7555517",
+      "position_applied": "Registrar KIET",
+      "current_designation": "Librarian",
+      "experience_years": 22,
+      "education": "MLISc (Master of Library & Information Sciences)",
+      "summary": "Experienced library and information management professional with over 20 years of expertise in cataloging, resource management, and academic support. Skilled in maintaining digital and physical library collections and overseeing library operations.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dd259f435d1d70",
+      "received_date": "2026-04-27 22:30",
+      "email_subject": "New Job Application: Registrar from Zahid Mahmood",
+      "sender_email": "KIET Job Portal <kietmis2025@gmail.com>",
+      "attachments": [
+        "CV_Zahid Mahmood_20260427.pdf"
+      ],
+      "applicant_name": "Zahid Mahmood",
+      "email": "zah.mah.khan@gmail.com",
+      "phone": "03002253371",
+      "position_applied": "Registrar KIET",
+      "current_designation": "Subject Head CS",
+      "experience_years": 12.5,
+      "education": "M.Sc. in Industrial and Business Mathematics (MIS Major)",
+      "summary": "Innovative and results-driven ICT instructor with extensive experience in teaching, curriculum design, and administrative leadership. Proven expertise in empowering learners with modern technology and leading accreditation processes.",
+      "has_resume": true,
+      "confidence": "medium"
+    },
+    {
+      "id": "19dd24a817994ca3",
+      "received_date": "2026-04-28 09:12",
+      "email_subject": "Application (covering letter and CV) for the post of Registrar",
+      "sender_email": "Dr Pervez Akhtar <pervaizakhtar0987@gmail.com>",
+      "attachments": [
+        "Kiet Covering Letter for Registrar Dr Pervez.pdf",
+        "CV for Registrar Dr_Pervez_Akhtar.pdf"
+      ],
+      "applicant_name": "Prof. Dr. Pervez Akhtar",
+      "email": "pervaizakhtar0987@gmail.com",
+      "phone": "0333-2258673",
+      "position_applied": "Registrar KIET",
+      "current_designation": "Professor (Visiting Faculty)",
+      "experience_years": 45,
+      "education": "PhD",
+      "summary": "Dr. Pervez Akhtar is a distinguished academic and institutional leader with over 45 years of progressive experience in higher education, bringing deep expertise in academic administration, faculty leadership, and institutional governance. He has a proven record of managing academic operations at scale, serving in senior leadership roles including Director and Acting Dean.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dd0fea34838a86",
+      "received_date": "2026-04-28 03:10",
+      "email_subject": "CV for Visiting Faculty-Business Administration.",
+      "sender_email": "Kanwal Siddiqui <kanwalsiddiki@gmail.com>",
+      "attachments": [
+        "CV_Kanwal_Mumtaz-Visiting Faculty-Buisness Admin Subjects - Copy.pdf"
+      ],
+      "applicant_name": "Kanwal Mumtaz",
+      "email": "learningworldwide360@gmail.com",
+      "phone": "+92-306-2116502",
+      "position_applied": "Unknown",
+      "current_designation": "Senior HR & Admin Consultant",
+      "experience_years": 28,
+      "education": "MS – Industrial & Organizational Human Psychology",
+      "summary": "Passionate and accomplished professional with 20 years of corporate experience and over 8 years of teaching and training in Business Administration, HRM, and Management Studies. Skilled in developing and delivering engaging lectures, fostering critical thinking, and mentoring students.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dd07e1e888b58e",
+      "received_date": "2026-04-27 13:50",
+      "email_subject": "New Job Application: Registrar from Anas Saleem",
+      "sender_email": "KIET Job Portal <kietmis2025@gmail.com>",
+      "attachments": [
+        "CV_Anas Saleem_20260427.pdf"
+      ],
+      "applicant_name": "Anas Saleem",
+      "email": "anassaleem402@gmail.com",
+      "phone": "03322163196",
+      "position_applied": "Registrar KIET",
+      "current_designation": "HR Senior Recruiter",
+      "experience_years": 9,
+      "education": "Masters in International Relation",
+      "summary": "Anas Saleem is an HR Senior Recruiter with 9 years of experience in Human Resources and Administration, holding a Masters in International Relation. He is adept at managing recruitment processes, providing administrative support, and ensuring HR compliance.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dcfb6b9372b725",
+      "received_date": "2026-04-27 21:12",
+      "email_subject": "Instructor - Artificial Intelligence",
+      "sender_email": "Syed Muhammad Hasan Danish <smhasan.danish@gmail.com>",
+      "attachments": [
+        "CV April 2026 -2e.pdf"
+      ],
+      "applicant_name": "Syed Muhammad Hasan Danish",
+      "email": "smhasan.danish@gmail.com",
+      "phone": "+92-310-2036158",
+      "position_applied": "Unknown",
+      "current_designation": "Unknown",
+      "experience_years": null,
+      "education": "Bachelor of Science (BS) in Computer Engineering",
+      "summary": "Syed Muhammad Hasan Danish is a computer engineering graduate with a strong focus on Artificial Intelligence, Machine Learning, and Cybersecurity, demonstrated through extensive project work, workshops, and numerous certifications. He possesses strong technical aptitude and analytical reasoning skills, seeking a professional setting to contribute to problem-solving and innovation.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dcf019eca9d809",
+      "received_date": "2026-04-27 17:54",
+      "email_subject": "Application for the position of Dean (Computing & Information Sciences)",
+      "sender_email": "Muhammad Ayaz Shirazi <ayaz.nedian@googlemail.com>",
+      "attachments": [
+        "DR AYAZ CV.pdf"
+      ],
+      "applicant_name": "Muhammad Ayaz Shirazi",
+      "email": "ayaz.nedian@googlemail.com",
+      "phone": "+923412788460",
+      "position_applied": "Dean Faculty of Computing & Information Sciences",
+      "current_designation": "Associate Professor",
+      "experience_years": 6,
+      "education": "PhD in Electronics Engineering",
+      "summary": "An accomplished Associate Professor holding a PhD in Electronics Engineering, with over five years of post-doctoral and academic experience focusing on deep learning, robotics, and 3D computer vision research, complemented by teaching expertise.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dce7bbbe95d734",
+      "received_date": "2026-04-27 04:28",
+      "email_subject": "New Job Application: Registrar from Asif Z. Warsi",
+      "sender_email": "KIET Job Portal <kietmis2025@gmail.com>",
+      "attachments": [
+        "CV_Asif Z. Warsi_20260427.pdf"
+      ],
+      "applicant_name": "Asif Z. Warsi",
+      "email": "warsi.asif@gmail.com",
+      "phone": "0335 2121337",
+      "position_applied": "Registrar KIET",
+      "current_designation": "Unknown",
+      "experience_years": 23,
+      "education": "Ph.D. Business Administration",
+      "summary": "Dr. Asif Z. Warsi is a PhD-qualified academic and investment professional with over 23 years of experience, specializing in Sustainability in Project Management. He is an expert in integrating sustainability, economics, finance, and project management, with a strong background in academic leadership and research.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dce7b14d33f2d5",
+      "received_date": "2026-04-27 04:27",
+      "email_subject": "New Job Application: Dean, Faculty of Management Sciences from Asif Z. Warsi",
+      "sender_email": "KIET Job Portal <kietmis2025@gmail.com>",
+      "attachments": [
+        "CV_Asif Z. Warsi_20260427.pdf"
+      ],
+      "applicant_name": "Asif Z. Warsi",
+      "email": "warsi.asif@gmail.com",
+      "phone": "0335 2121337",
+      "position_applied": "Dean Faculty of Management Sciences",
+      "current_designation": "Academic and Investment Professional",
+      "experience_years": 23,
+      "education": "Ph.D. Business Administration",
+      "summary": "Dr. Asif Z. Warsi is a PhD-qualified academic and investment professional with over 23 years of experience in higher education, sustainability research, and financial services. He is an expert in integrating sustainability, economics, finance, and project management to drive organizational performance and institutional impact.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dce58ef3390de2",
+      "received_date": "2026-04-27 14:50",
+      "email_subject": "Application for the Position of Registrar",
+      "sender_email": "Kashif Bashir <kashif@kiet.edu.pk>",
+      "attachments": [
+        "CV-kashif_April_26.DOC",
+        "covering Letter for registrar.docx"
+      ],
+      "applicant_name": "Kashif Bashir",
+      "email": "kashif@kiet.edu.pk",
+      "phone": "Unknown",
+      "position_applied": "Registrar KIET",
+      "current_designation": "Deputy Director Administration",
+      "experience_years": 23,
+      "education": "MS degree in Computer Science",
+      "summary": "Kashif Bashir is an experienced professional with over two decades in academic and administrative management at KIET, holding roles like Head of Department and Deputy Director Administration. He possesses strong organizational and decision-making skills, making him well-suited for the Registrar position.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dcd9e2ddbf8e0c",
+      "received_date": "2026-04-27 11:26",
+      "email_subject": "Registrar",
+      "sender_email": "Sabir Malik <sabir.malik@gmail.com>",
+      "attachments": [
+        "Document from پاکستان"
+      ],
+      "applicant_name": "Saber Hosaain Malik",
+      "email": "saberhosaain.malik@gmail.com",
+      "phone": "021-35383520",
+      "position_applied": "Registrar KIET",
+      "current_designation": "Group Director – Operations",
+      "experience_years": 24,
+      "education": "MBA – Human Resource Management",
+      "summary": "Seasoned C-Suite Executive with over 24 years of cross-industry leadership in Operations Management, Human Resources, and Academic Administration. Proven track record in navigating complex regulatory landscapes (HEC, SECP) and driving institutional growth.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dcd9b6fde06749",
+      "received_date": "2026-04-27 11:22",
+      "email_subject": "Application for the Post of Registrar",
+      "sender_email": "Syed Muhammad Tarique <starique@neduet.edu.pk>",
+      "attachments": [
+        "Syed Muhammad Tarique (CV).pdf"
+      ],
+      "applicant_name": "Syed Muhammad Tarique",
+      "email": "starique@neduet.edu.pk",
+      "phone": "0333-5066176",
+      "position_applied": "Registrar KIET",
+      "current_designation": "Deputy Registrar",
+      "experience_years": 35,
+      "education": "M.A. (Economics)",
+      "summary": "Academic Administrator with over 35 years of extensive experience in administrative and academic support roles. Proven expertise in university administration, training coordination, examination and application management, and policy implementation.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dcb826a85e53af",
+      "received_date": "2026-04-27 01:36",
+      "email_subject": "Applying for Mathematics Teacher",
+      "sender_email": "sabahat latif <latifsabahat1981@gmail.com>",
+      "attachments": [
+        "sabahat cv dec 2026.pdf"
+      ],
+      "applicant_name": "Sabahat Latif",
+      "email": "latifsabahat1981@gmail.com",
+      "phone": "03039701133",
+      "position_applied": "Unknown",
+      "current_designation": "Visiting Faculty",
+      "experience_years": 9,
+      "education": "M.Phil in Mathematics",
+      "summary": "Flexible and organized educational professional with 9 years of teaching expertise in various mathematical concepts like Calculus and Linear Algebra, skilled at explaining complicated topics understandably.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dcadc3acaed8dd",
+      "received_date": "2026-04-26 22:35",
+      "email_subject": "Re: CV for the position of Registrar, KIET",
+      "sender_email": "Ghulam Abbas <junejoabbas@gmail.com>",
+      "attachments": [
+        "Abbas CV April 26, 2026.pdf"
+      ],
+      "applicant_name": "Ghulam Abbas Junejo",
+      "email": "junejoabbas@gmail.com",
+      "phone": "+923332706505",
+      "position_applied": "Registrar KIET",
+      "current_designation": "Additional Registrar BPS-19",
+      "experience_years": 14,
+      "education": "Unknown",
+      "summary": "An experienced administrator with over 14 years in university administration, including roles as Registrar (Acting) and Deputy Registrar, demonstrating strong capabilities in HR, general administration, and strategic planning for statutory bodies.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dcaa7f98a570af",
+      "received_date": "2026-04-26 16:38",
+      "email_subject": "Dean – Computing & Information Sciences",
+      "sender_email": "KHALID MUHAMMAD <khalidmcs@yahoo.com>",
+      "attachments": [
+        "CV Dr KBM Detailed APRIL 2026.docx"
+      ],
+      "applicant_name": "Dr. Engr. Khalid Bin Muhammad",
+      "email": "khalidmcs@yahoo.com",
+      "phone": "0322-2621544",
+      "position_applied": "Dean Faculty of Computing & Information Sciences",
+      "current_designation": "Head of Department of Computer Science & Software Engineering at Ziauddin University",
+      "experience_years": 28,
+      "education": "PhD in Computer Science",
+      "summary": "A visionary academic leader with over 28 years of experience in higher education management, IT governance, and industry. Currently serving as Head of Department at Ziauddin University, they have a proven track record in strategic leadership, academic excellence, and institutional development.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dc9d841de5fa1a",
+      "received_date": "2026-04-26 06:51",
+      "email_subject": "New Job Application: Dean, Faculty of Computing and Information Sciences from Muhamamd Ibrar ul Haque",
+      "sender_email": "KIET Job Portal <kietmis2025@gmail.com>",
+      "attachments": [
+        "CV_Muhamamd Ibrar ul Haque_20260426.pdf"
+      ],
+      "applicant_name": "Muhammad Ibrar ul Haque",
+      "email": "mibrarhaq@yahoo.com",
+      "phone": "03223564066",
+      "position_applied": "Dean Faculty of Computing & Information Sciences",
+      "current_designation": "CHAIRMAN, Electrical Engg. Dept. / PROFESSOR",
+      "experience_years": 33,
+      "education": "PhD (Electronic Engineering)",
+      "summary": "Prof. Dr. Muhammad Ibrar-ul-Haque has over 33 years of experience in teaching and administration, currently serving as Chairman and Professor at Sir Syed University of Engineering & Technology. He specializes in Electronic Engineering with a research focus on Image Processing and DSP, and has a strong background in accreditation processes and academic leadership.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dc9c7a7d5ebde8",
+      "received_date": "2026-04-26 17:33",
+      "email_subject": "Apply for the position of lab engineer (Computer Science n Software Engineering)",
+      "sender_email": "umama saifullah <umamasaifullah990@gmail.com>",
+      "attachments": [
+        "Umama Saifullah cv (updated).docx"
+      ],
+      "applicant_name": "Umama Saifullah",
+      "email": "umamasaifullah990@gmail.com",
+      "phone": "03052737977",
+      "position_applied": "Unknown",
+      "current_designation": "Lab Engineer/Lab Coordinator/ FYP Co-Coordinator/ OBE Secretary",
+      "experience_years": null,
+      "education": "Bachelors of Science in Software Engineering",
+      "summary": "Dedicated and result-oriented academic professional with strong experience in Outcome-Based Education (OBE) implementation, departmental quality assurance, and computing laboratory operations. Skilled in supporting academic processes, maintaining accreditation documentation, and facilitating smooth execution of departmental academic activities.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dc9c63627c4c69",
+      "received_date": "2026-04-26 17:33",
+      "email_subject": "Apply for Lecturer in computer science department",
+      "sender_email": "syed mushtaher <smmushtaher@gmail.com>",
+      "attachments": [
+        "Mushtaher Resume.pdf"
+      ],
+      "applicant_name": "Syed Muhammad Mushtaher Uddin",
+      "email": "smmushtaher@gmail.com",
+      "phone": "03426561319",
+      "position_applied": "Unknown",
+      "current_designation": "FYP Coordinator CS/SE",
+      "experience_years": 5,
+      "education": "MS - Computer Science",
+      "summary": "Syed Muhammad Mushtaher Uddin is a professional with over 5 years of experience in Computer Science and Information Security, specializing in academic coordination, teaching, and research. He holds an MS in Computer Science and possesses strong skills in cybersecurity, network security, and ethical hacking.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dc880ca237efba",
+      "received_date": "2026-04-26 11:36",
+      "email_subject": "Application for the postion of Dean, College of Computing & Info Sceences.",
+      "sender_email": "\"Dr. Salman A Khan\" <sakhan@kiet.edu.pk>",
+      "attachments": [
+        "CV-SalmanKhan-24April2026.pdf"
+      ],
+      "applicant_name": "Salman A. Khan",
+      "email": "sakhan@kiet.edu.pk",
+      "phone": "+92 335 373 4550",
+      "position_applied": "Dean Faculty of Computing & Information Sciences",
+      "current_designation": "Professor and Associate Dean, College of Computing and Information Sciences",
+      "experience_years": 29,
+      "education": "PhD in Computer Science",
+      "summary": "Dr. Salman A. Khan is a Professor and Associate Dean with 29 years of combined experience in university-level teaching, research, and administration, currently serving at KIET.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dc5fbbf2345af1",
+      "received_date": "2026-04-25 23:51",
+      "email_subject": "CV 2026SR",
+      "sender_email": "\"Dr. Shafiq-ur-Rehman Economics\" <shafiqur@uok.edu.pk>",
+      "attachments": [
+        "CV 2026SR.docx"
+      ],
+      "applicant_name": "Shafiq Ur Rehman",
+      "email": "shafiqur@uok.edu.pk",
+      "phone": "111-202-303",
+      "position_applied": "Dean Faculty of Management Sciences",
+      "current_designation": "HOD, Business, Economics and Finance",
+      "experience_years": null,
+      "education": "Ph.D",
+      "summary": "Dr. Shafiq Ur Rehman is a Professor and HOD of Business, Economics, and Finance with Ph.D and M.Phil degrees, applying for the Dean Faculty of Management Sciences position. He has significant experience as an external examiner for numerous doctoral and master's theses.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dc546fb191e9ee",
+      "received_date": "2026-04-25 09:34",
+      "email_subject": "New Job Application: Dean, Faculty of Management Sciences from WhoCares",
+      "sender_email": "KIET Job Portal <kietmis2025@gmail.com>",
+      "attachments": [
+        "CV_WhoCares_20260425.pdf"
+      ],
+      "applicant_name": "WhoCares",
+      "email": "findit@gmail.com",
+      "phone": "2013967584",
+      "position_applied": "Dean Faculty of Management Sciences",
+      "current_designation": "Unknown",
+      "experience_years": null,
+      "education": "Unknown",
+      "summary": "The provided information is insufficient to generate a professional summary due to placeholder values for key qualifications and experience.",
+      "has_resume": true,
+      "confidence": "low"
+    },
+    {
+      "id": "19dc5099c47ef5c5",
+      "received_date": "2026-04-25 08:27",
+      "email_subject": "New Job Application: Dean, Faculty of Computing and Information Sciences from Dr. Muhammad Naseem",
+      "sender_email": "KIET Job Portal <kietmis2025@gmail.com>",
+      "attachments": [
+        "CV_Dr. Muhammad Naseem_20260425.pdf"
+      ],
+      "applicant_name": "Dr. Muhammad Naseem",
+      "email": "mnaseem105@gmail.com",
+      "phone": "+92 300 2172074",
+      "position_applied": "Dean Faculty of Computing & Information Sciences",
+      "current_designation": "Associate Dean and Chairperson of the Software Engineering Department, SSUET",
+      "experience_years": 25,
+      "education": "PhD in Computer Science",
+      "summary": "Associate Professor with 25+ years of experience in Computer Security, Cryptography, Distributed Systems, and Artificial Intelligence. Strong record in academic leadership, research supervision, and curriculum development, committed to advancing research and fostering innovation in computing education.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dc4f714cc9c09b",
+      "received_date": "2026-04-25 08:06",
+      "email_subject": "New Job Application: Dean, Faculty of Management Sciences from Zubair A. Shah",
+      "sender_email": "KIET Job Portal <kietmis2025@gmail.com>",
+      "attachments": [
+        "CV_Zubair A. Shah_20260425.pdf"
+      ],
+      "applicant_name": "Zubair A. Shah",
+      "email": "zubairashah@gmail.com",
+      "phone": "0308-2056180",
+      "position_applied": "Dean Faculty of Management Sciences",
+      "current_designation": "Remote Consultant/Independent Contractor",
+      "experience_years": 18,
+      "education": "PhD",
+      "summary": "A Senior Professor of Management Sciences with over 18 years of academic leadership experience in Pakistani business schools and a decade of corporate experience in the US. Brings a balanced, practice-oriented leadership approach to academic management, quality enhancement, and strategic growth.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dc4c08e4260428",
+      "received_date": "2026-04-25 07:07",
+      "email_subject": "New Job Application: Registrar from Syed Nasir Ali Mirza",
+      "sender_email": "KIET Job Portal <kietmis2025@gmail.com>",
+      "attachments": [
+        "CV_Syed Nasir Ali Mirza_20260425.pdf"
+      ],
+      "applicant_name": "Syed Nasir Ali Mirza",
+      "email": "snamirza@hotmail.com",
+      "phone": "0345-2455967",
+      "position_applied": "Registrar KIET",
+      "current_designation": "Registrar",
+      "experience_years": 20,
+      "education": "M.Sc (Economics)",
+      "summary": "An experienced higher education administrator and economist with more than 20 years of professional exposure at international, national, and academic institutions. He has a proven track record as Registrar at two Universities, managing academic policies, examinations, and compliance with HEC.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dc4973a95c138e",
+      "received_date": "2026-04-25 06:22",
+      "email_subject": "New Job Application: Registrar from Saman Shahid",
+      "sender_email": "KIET Job Portal <kietmis2025@gmail.com>",
+      "attachments": [
+        "CV_Saman Shahid_20260425.pdf"
+      ],
+      "applicant_name": "Saman Shahid",
+      "email": "samanshahid565@gmail.com",
+      "phone": "03302864634",
+      "position_applied": "Registrar KIET",
+      "current_designation": "Admission Manager",
+      "experience_years": 3,
+      "education": "Bachelor’s In Arts",
+      "summary": "Saman Shahid is an administrative professional with 3 years of experience, currently serving as an Admission Manager. She holds a Bachelor of Arts and demonstrates strong skills in process improvement, anticipatory support, and communication.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dc3a5844cbeb84",
+      "received_date": "2026-04-25 01:58",
+      "email_subject": "New Job Application: Registrar from Zahid Mahmood",
+      "sender_email": "KIET Job Portal <kietmis2025@gmail.com>",
+      "attachments": [
+        "CV_Zahid Mahmood_20260425.pdf"
+      ],
+      "applicant_name": "Zahid Mahmood",
+      "email": "zah.mah.khan@gmail.com",
+      "phone": "03002253371",
+      "position_applied": "Registrar KIET",
+      "current_designation": "Subject Head CS",
+      "experience_years": 24,
+      "education": "M.Sc. in Industrial and Business Mathematics (MIS Major)",
+      "summary": "Innovative and results-driven ICT instructor with over two decades of experience in teaching, curriculum designing, self-study report structuring, accreditation framework execution, and administrative leadership. Proven expertise in empowering learners with modern technology and instructional strategies.",
+      "has_resume": true,
+      "confidence": "medium"
+    },
+    {
+      "id": "19dc382831f64ae1",
+      "received_date": "2026-04-25 01:20",
+      "email_subject": "New Job Application: Registrar from Madiha Perwaiz",
+      "sender_email": "KIET Job Portal <kietmis2025@gmail.com>",
+      "attachments": [
+        "CV_Madiha Perwaiz_20260425.pdf"
+      ],
+      "applicant_name": "Madiha Perwaiz",
+      "email": "madihabhatti134b@gmail.com",
+      "phone": "03327699826",
+      "position_applied": "Registrar KIET",
+      "current_designation": "Unknown",
+      "experience_years": 5,
+      "education": "Master of Business Administration (MBA) - Finance",
+      "summary": "Seeking an opportunity in Accounts & Finance, Madiha Perwaiz is a highly organized professional with an MBA in Finance and approximately five years of experience in the banking and educational sectors. She possesses excellent communication and problem-solving skills, and values integrity, efficiency, and exceptional customer service.",
+      "has_resume": true,
+      "confidence": "high"
+    },
+    {
+      "id": "19dc2f151d321120",
+      "received_date": "2026-04-25 09:40",
+      "email_subject": "REGISTRAR",
+      "sender_email": "Maryam Hamid <maryamhamid016@gmail.com>",
+      "attachments": [
+        "Maryam Hamid Resume.pdf"
+      ],
+      "applicant_name": "Unknown",
+      "email": "Unknown",
+      "phone": "Unknown",
+      "position_applied": "Unknown",
+      "current_designation": "Unknown",
+      "experience_years": null,
+      "education": "Unknown",
+      "summary": "Could not parse this application.",
+      "has_resume": true,
+      "confidence": "low"
+    },
+    {
+      "id": "19dc0ee0f6afef16",
+      "received_date": "2026-04-24 13:18",
+      "email_subject": "New Job Application: Registrar from Prof. Dr. Raza Ali Khan",
+      "sender_email": "KIET Job Portal <kietmis2025@gmail.com>",
+      "attachments": [
+        "CV_Prof. Dr. Raza Ali Khan_20260424.pdf"
+      ],
+      "applicant_name": "Unknown",
+      "email": "Unknown",
+      "phone": "Unknown",
+      "position_applied": "Unknown",
+      "current_designation": "Unknown",
+      "experience_years": null,
+      "education": "Unknown",
+      "summary": "Could not parse this application.",
+      "has_resume": true,
+      "confidence": "low"
+    },
+    {
+      "id": "19dc0eb97620b5a0",
+      "received_date": "2026-04-24 13:15",
+      "email_subject": "New Job Application: Dean, Faculty of Management Sciences from Prof. Dr. Raza Ali Khan",
+      "sender_email": "KIET Job Portal <kietmis2025@gmail.com>",
+      "attachments": [
+        "CV_Prof. Dr. Raza Ali Khan_20260424.pdf"
+      ],
+      "applicant_name": "Unknown",
+      "email": "Unknown",
+      "phone": "Unknown",
+      "position_applied": "Unknown",
+      "current_designation": "Unknown",
+      "experience_years": null,
+      "education": "Unknown",
+      "summary": "Could not parse this application.",
+      "has_resume": true,
+      "confidence": "low"
+    }
+  ]
 }
