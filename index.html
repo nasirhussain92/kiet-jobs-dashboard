@@ -358,6 +358,9 @@
   }
   .has-resume { color: var(--green); font-size: 12px; font-weight: 500; }
   .no-resume { color: var(--ink-faint); font-size: 12px; }
+  .badge-kiet { background: #f0e8ff; color: #5b3a8c; }
+  .kiet-yes { color: #5b3a8c; font-size: 12px; font-weight: 600; }
+  .kiet-no  { color: var(--ink-faint); font-size: 12px; }
 
   .empty-state {
     text-align: center;
@@ -495,6 +498,7 @@
     </div>
     <div class="header-right">
       <span class="last-updated" id="last-updated"></span>
+      <button class="logout-btn" onclick="exportExcel()">Export Excel</button>
       <button class="logout-btn" onclick="doLogout()">Log out</button>
     </div>
   </header>
@@ -513,6 +517,11 @@
       <div class="stat-card">
         <div class="stat-label">This Month</div>
         <div class="stat-value" id="s-month">—</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">KIET Alumni</div>
+        <div class="stat-value" id="s-kiet">—</div>
+        <div class="stat-sub">previously worked here</div>
       </div>
       <div class="stat-card" id="s-pos-card-1">
         <div class="stat-label" id="s-pos-label-1">Position 1</div>
@@ -552,6 +561,14 @@
         </select>
       </div>
       <div class="control-group">
+        <label class="control-label">KIET Alumni</label>
+        <select id="filter-kiet" onchange="applyFilters()">
+          <option value="">All</option>
+          <option value="yes">Previously at KIET</option>
+          <option value="no">Not at KIET</option>
+        </select>
+      </div>
+      <div class="control-group">
         <label class="control-label">Confidence</label>
         <select id="filter-conf" onchange="applyFilters()">
           <option value="">All</option>
@@ -575,8 +592,10 @@
             <th onclick="sortBy('applicant_name')">Name <span class="sort-arrow" id="arr-applicant_name">↕</span></th>
             <th onclick="sortBy('position_applied')">Position <span class="sort-arrow" id="arr-position_applied">↕</span></th>
             <th onclick="sortBy('current_designation')">Designation <span class="sort-arrow" id="arr-current_designation">↕</span></th>
+            <th onclick="sortBy('last_organization')">Last Org <span class="sort-arrow" id="arr-last_organization">↕</span></th>
             <th onclick="sortBy('experience_years')">Exp. <span class="sort-arrow" id="arr-experience_years">↕</span></th>
             <th onclick="sortBy('received_date')">Received <span class="sort-arrow" id="arr-received_date">↕</span></th>
+            <th onclick="sortBy('worked_at_kiet')">KIET Alumni <span class="sort-arrow" id="arr-worked_at_kiet">↕</span></th>
             <th>Resume</th>
             <th onclick="sortBy('confidence')">Parse Quality <span class="sort-arrow" id="arr-confidence">↕</span></th>
           </tr>
@@ -605,16 +624,20 @@
         <div class="detail-item"><div class="detail-key">Education</div><div class="detail-val" id="m-edu"></div></div>
         <div class="detail-item"><div class="detail-key">Experience</div><div class="detail-val" id="m-exp"></div></div>
         <div class="detail-item"><div class="detail-key">Current Role</div><div class="detail-val" id="m-role"></div></div>
+        <div class="detail-item"><div class="detail-key">Last Organization</div><div class="detail-val" id="m-lastorg"></div></div>
         <div class="detail-item"><div class="detail-key">Received</div><div class="detail-val" id="m-date"></div></div>
         <div class="detail-item"><div class="detail-key">Email Subject</div><div class="detail-val" id="m-subject"></div></div>
         <div class="detail-item"><div class="detail-key">Parse Confidence</div><div class="detail-val" id="m-confidence"></div></div>
       </div>
+      <div class="detail-section-title" style="margin-top:16px">KIET Employment History</div>
+      <div id="m-kiet-tenures" style="margin-bottom:20px;font-size:14px;color:var(--ink)"></div>
       <div class="detail-section-title">Attachments</div>
       <div id="m-attachments"></div>
     </div>
   </div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script>
 // ─── CONFIG ────────────────────────────────────────────────
 // CHANGE THIS PASSWORD before deploying!
@@ -713,6 +736,7 @@ function updateStats() {
   document.getElementById('s-total').textContent = allApplicants.length;
   document.getElementById('s-resume').textContent = allApplicants.filter(a => a.has_resume).length;
   const now = new Date();
+  document.getElementById('s-kiet').textContent = allApplicants.filter(a => a.worked_at_kiet).length;
   document.getElementById('s-month').textContent = allApplicants.filter(a => {
     if (!a.received_date) return false;
     const d = new Date(a.received_date);
@@ -748,6 +772,9 @@ function applyFilters() {
     }
     if (from && a.received_date) { if (a.received_date.slice(0,10) < from) return false; }
     if (to   && a.received_date) { if (a.received_date.slice(0,10) > to) return false; }
+    const kiet = document.getElementById('filter-kiet').value;
+    if (kiet === 'yes' && !a.worked_at_kiet) return false;
+    if (kiet === 'no'  &&  a.worked_at_kiet) return false;
     if (resume === 'yes' && !a.has_resume) return false;
     if (resume === 'no'  &&  a.has_resume) return false;
     if (conf && a.confidence !== conf) return false;
@@ -817,8 +844,12 @@ function renderTable() {
       </td>
       <td><span class="badge badge-position">${esc(a.position_applied || 'Unknown')}</span></td>
       <td style="color:var(--ink-muted);font-size:13px">${esc(a.current_designation || '—')}</td>
+      <td style="color:var(--ink-muted);font-size:13px">${esc(a.last_organization || '—')}</td>
       <td style="font-size:13px">${a.experience_years != null ? a.experience_years + ' yrs' : '—'}</td>
       <td class="date-cell">${formatDate(a.received_date)}</td>
+      <td>${a.worked_at_kiet
+        ? '<span class="kiet-yes">Yes</span>'
+        : '<span class="kiet-no">—</span>'}</td>
       <td>${a.has_resume
         ? '<span class="has-resume">📎 Yes</span>'
         : '<span class="no-resume">—</span>'}</td>
@@ -848,6 +879,16 @@ function openModal(idx) {
   document.getElementById('m-edu').textContent = a.education || '—';
   document.getElementById('m-exp').textContent = a.experience_years != null ? a.experience_years + ' years' : '—';
   document.getElementById('m-role').textContent = a.current_designation || '—';
+  document.getElementById('m-lastorg').textContent = a.last_organization || '—';
+  // KIET tenure
+  const kietDiv = document.getElementById('m-kiet-tenures');
+  if (a.worked_at_kiet && a.kiet_tenures && a.kiet_tenures.length) {
+    kietDiv.innerHTML = a.kiet_tenures.map(t =>
+      `<div style="margin-bottom:6px"><strong>${esc(t.position||'Unknown role')}</strong><br><span style="color:var(--ink-muted);font-size:13px">${esc(t.from||'?')} — ${esc(t.to||'?')}</span></div>`
+    ).join('');
+  } else {
+    kietDiv.textContent = 'No previous KIET employment found.';
+  }
   document.getElementById('m-date').textContent = formatDate(a.received_date);
   document.getElementById('m-subject').textContent = a.email_subject || '—';
   document.getElementById('m-confidence').innerHTML = `<span class="badge badge-${a.confidence || 'low'}">${a.confidence || 'low'}</span>`;
@@ -870,10 +911,41 @@ function closeModalDirect() {
   document.getElementById('modal-overlay').classList.remove('open');
 }
 
+function exportExcel() {
+  if (!filteredApplicants.length) { alert('No data to export.'); return; }
+  const rows = filteredApplicants.map(a => ({
+    'Received Date':       a.received_date || '',
+    'Applicant Name':      a.applicant_name || '',
+    'Email':              a.email || a.sender_email || '',
+    'Phone':              a.phone || '',
+    'Position Applied':   a.position_applied || '',
+    'Current Designation':a.current_designation || '',
+    'Last Organization':  a.last_organization || '',
+    'Experience (Years)': a.experience_years || '',
+    'Education':          a.education || '',
+    'Worked at KIET':     a.worked_at_kiet ? 'Yes' : 'No',
+    'KIET History':       (a.kiet_tenures||[]).map(t=>`${t.position||''} (${t.from||'?'}-${t.to||'?'})`).join(' | '),
+    'Summary':            a.summary || '',
+    'Email Subject':      a.email_subject || '',
+    'Has Resume':         a.has_resume ? 'Yes' : 'No',
+    'Attachments':        (a.attachments||[]).join(', '),
+    'Parse Quality':      a.confidence || ''
+  }));
+  const ws = XLSX.utils.json_to_sheet(rows);
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, 'Applicants');
+  const date = new Date().toISOString().slice(0,10);
+  XLSX.writeFile(wb, `KIET_Applicants_${date}.xlsx`);
+}
+
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDirect(); });
 
 // Boot
-if (sessionStorage.getItem('kiet_auth') === '1') loadData();
+if (sessionStorage.getItem('kiet_auth') === '1') {
+  loadData();
+  // Auto-refresh every 5 minutes
+  setInterval(() => { if (sessionStorage.getItem('kiet_auth') === '1') loadData(); }, 5 * 60 * 1000);
+}
 </script>
 </body>
 </html>
